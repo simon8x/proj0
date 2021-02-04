@@ -1,0 +1,13 @@
+.borde-rojo{
+    border: double 1px red;
+    border-radius: 4px;
+} 
+
+.padd10{
+    padding: 10px;
+}
+
+.col2p{
+    width: 20%;
+    float: left;
+}
