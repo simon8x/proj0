@@ -1,6 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import ComponenteBloque1 from './components/componentebloque1';
+import ComponenteBloque2 from './components/componentebloque2';
+import ComponenteBloque3 from './components/componentebloque3';
+import Stateless1 from './components/stateless1';
+import Statefullcontador from './components/statefullcontador';
+import Peliculas from './components/statefullpeliculas';
 import './assets/css/estilos.css';
 
 function App() {
@@ -21,8 +26,16 @@ function App() {
           Learn React
         </a>*/}
       </header>
-      <ComponenteBloque1/>
+      <ComponenteBloque1 nombre="Miguel Angel Buo" profesion="pintor"/>
+      <ComponenteBloque2 nombre="Raphael Sanzio" profesion="pintor"/>
+      <ComponenteBloque3 nombre="Leonardo Davinci" profesion="pintor"/>
+      
+      <Stateless1 nombre="Raphael Sanzio" profesion="pintor"/>
+      <Statefullcontador/>
+      <Peliculas/>
+
     </div>
+
   );
 }
 

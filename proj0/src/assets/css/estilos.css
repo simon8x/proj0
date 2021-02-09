@@ -3,11 +3,38 @@
     border-radius: 4px;
 } 
 
+.borde-verde{
+    border: double 1px green;
+    border-radius: 4px;
+} 
+
 .padd10{
     padding: 10px;
 }
 
 .col2p{
+    width: 30%;
+    float: left;
+}
+
+.col28{
     width: 20%;
     float: left;
+}
+
+.col82{
+    width: 78%;
+    float: left;
+}
+
+.cleaner{
+    clear: both;
+}
+
+.mt10{
+    margin-top: 10px;
+}
+
+.cover-peli{
+    max-width: 100%;
 }
