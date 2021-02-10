@@ -27,6 +27,12 @@
     float: left;
 }
 
+.col62{
+    width: 58%;
+    float: left;
+}
+
+
 .cleaner{
     clear: both;
 }
@@ -37,4 +43,11 @@
 
 .cover-peli{
     max-width: 100%;
+}
+.linea-horizontal{
+    border-bottom:solid 1px crimson;
+} 
+
+.m2px{
+    margin:2px 0;
 }

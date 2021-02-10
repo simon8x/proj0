@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Pelicula from './statefullpelicula';
 
-class Peliculas extends Component{
+class PeliculasCE extends Component{
 
     state = {
         peliculas:[
@@ -12,13 +12,27 @@ class Peliculas extends Component{
         ]
     }
 
+    cambiarTitulo = () => {
+        var { peliculas } = this.state;
+        var random = Math.floor(Math.random() * 3);
+        
+        peliculas[0].titulo = "The Godfather" +random;
+
+        this.setState({
+            peliculas : peliculas
+        });
+    }
+
     render(){
         return(
 
             <div className="borde-rojo padd10 col2p">
-            <h3>Soy el componente Peliculas </h3>
+            <h3>Soy el componente PeliculasCE </h3>
             <h6>(con estado) y extends</h6>
-            <p>un h3 y un p y estas props</p>
+            <p>Llamo a pelicual y cambio el state</p>
+            <div>
+                <button onClick={this.cambiarTitulo}> traducir </button>
+            </div>
             {
                     this.state.peliculas.map((pelicula,i)=>{
                         return(
@@ -36,4 +50,4 @@ class Peliculas extends Component{
     }
 }
 
-export default Peliculas
+export default PeliculasCE
