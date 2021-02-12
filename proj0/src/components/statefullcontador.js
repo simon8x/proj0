@@ -27,7 +27,7 @@ export default class Contador extends React.Component{
 
     render(){
         return(
-            <div className="borde-rojo padd10 col2p">
+            <div className="borde-rojo padd10">
                 <h3>Soy el bloque statefullcontador </h3>
                 <h6>sumo y resto sin roncha</h6>
                 <p>Cuenta actual = {this.state.contador}</p>

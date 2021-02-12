@@ -26,7 +26,7 @@ class PeliculasCE extends Component{
     render(){
         return(
 
-            <div className="borde-rojo padd10 col2p">
+            <div className="borde-rojo padd10">
             <h3>Soy el componente PeliculasCE </h3>
             <h6>(con estado) y extends</h6>
             <p>Llamo a pelicual y cambio el state</p>

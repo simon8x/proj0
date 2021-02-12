@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default propiedades =>(
-    <div className="borde-rojo padd10 col2p">
+    <div className="borde-rojo padd10">
         <h3>Soy el bloque 3 </h3>
         <h6>(sin estado) y generado a partir de función =></h6>
         <p>un h3 y un p y estas propiedades</p>

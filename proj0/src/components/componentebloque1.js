@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class ComponenteBloque1 extends Component{
     render(){
         return(
-            <div className="borde-rojo padd10 col2p">
+            <div className="borde-rojo padd10">
                 <h3>Soy el bloque 1 </h3>
                 <h6>(sin estado) y generado a partir de clase</h6>
                 <p>un h3 y un p y estas props</p>

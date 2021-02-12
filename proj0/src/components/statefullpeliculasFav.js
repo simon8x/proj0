@@ -34,34 +34,34 @@ class PeliculasCE extends Component{
     render(){
         return(
 
-            <div className="borde-rojo padd10 col2p">
-            <h3>Soy el componente PeliculasCE </h3>
-            <h6>(con estado) y extends</h6>
-            {this.state.favorita.titulo ?(
-                <p>                
-                    <strong>La Favorita es: </strong>
-                    <span> {this.state.favorita.titulo} </span>
-                </p>
-            ) : (
-                <p>No hay favorita aún</p>
-            )
-            }
-            <div>
-                <button onClick={this.cambiarTitulo}> traducir </button>
-            </div>
-            {
-                    this.state.peliculas.map((pelicula,i)=>{
-                        return(
-                            <PeliculaFav 
-                                key={i} 
-                                pelicula={pelicula}
-                                marcarFavorita={this.favorita}
-                            />
-                        )
-                    })
-            }
+            <div className="borde-rojo padd10">
+                <h3>Soy el componente PeliculasCE </h3>
+                <h6>(con estado) y extends</h6>
+                {this.state.favorita.titulo ?(
+                    <p>                
+                        <strong>La Favorita es: </strong>
+                        <span> {this.state.favorita.titulo} </span>
+                    </p>
+                ) : (
+                    <p>No hay favorita aún</p>
+                )
+                }
+                <div>
+                    <button onClick={this.cambiarTitulo}> traducir </button>
+                </div>
+                {
+                        this.state.peliculas.map((pelicula,i)=>{
+                            return(
+                                <PeliculaFav 
+                                    key={i} 
+                                    pelicula={pelicula}
+                                    marcarFavorita={this.favorita}
+                                />
+                            )
+                        })
+                }
 
-        </div>
+            </div>
             
         )
     }
