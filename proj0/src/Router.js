@@ -15,6 +15,7 @@ import Statefullcontador from './components/statefullcontador';
 import Peliculas from './components/statefullpeliculas';
 import PeliculasCE from './components/statefullpeliculasCambioEstado';
 import PeliculasFav from './components/statefullpeliculasFav';
+import Home from './components/home';
 
 class Router extends Component{
 
@@ -23,11 +24,11 @@ class Router extends Component{
             <BrowserRouter>
                 <Header />
 
-                <div className="contenido">
+                
 
                 {/*configurar rutas y páginas*/}
                 <Switch>
-                    <Route exact path ="/" component={PeliculasCE} />
+                    <Route exact path ="/home" component={Home} />
                     <Route exact path ="/cb1" component={ComponenteBloque1} />
                     <Route exact path ="/cb2" component={ComponenteBloque2} />
                     <Route exact path ="/pagina1" render ={() => (
@@ -52,7 +53,7 @@ class Router extends Component{
                     <Route component={Error} />
                 </Switch>
 
-                </div>
+                
 
                 <div className="aside">
                 
