@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import Slider from './slider';
 import Sidebar from './sidebar';
 
-class Home extends Component{
+class Blog extends Component{
 
     render(){
 
         return(
             <div>
                 <Slider 
-                    title="Estamos en la home"
-                    btntxt="Ver Más"
-                    size="slider-big"
+                    title="Estamos en la Blog"
+                    size="slider-small"
                 />
                     
                 
@@ -20,7 +19,9 @@ class Home extends Component{
                 </div>
 
                 <div className="aside">
-                    <Sidebar/>
+                    <Sidebar
+                    blog="true"
+                    />
                 </div>
 
 
@@ -29,4 +30,4 @@ class Home extends Component{
     }
 }
 
-export default Home
+export default Blog

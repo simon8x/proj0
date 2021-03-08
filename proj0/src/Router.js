@@ -16,6 +16,8 @@ import Peliculas from './components/statefullpeliculas';
 import PeliculasCE from './components/statefullpeliculasCambioEstado';
 import PeliculasFav from './components/statefullpeliculasFav';
 import Home from './components/home';
+import Blog from './components/blog';
+import Formulario from './components/formulario';
 
 class Router extends Component{
 
@@ -28,8 +30,10 @@ class Router extends Component{
 
                 {/*configurar rutas y páginas*/}
                 <Switch>
+                    <Route exact path ="/" component={Home} />
                     <Route exact path ="/home" component={Home} />
-                    <Route exact path ="/cb1" component={ComponenteBloque1} />
+                    <Route exact path ="/blog" component={Blog} />
+                    <Route exact path ="/formulario" component={Formulario} />
                     <Route exact path ="/cb2" component={ComponenteBloque2} />
                     <Route exact path ="/pagina1" render ={() => (
                         <h1>Hola desde la ruta página 1</h1>
@@ -55,7 +59,7 @@ class Router extends Component{
 
                 
 
-                <div className="aside">
+
                 
 
                 <div className="cleaner"></div><div className="linea-horizontal m2px"></div>
@@ -70,7 +74,7 @@ class Router extends Component{
                 <PeliculasCE/>
                 <PeliculasFav/>
 
-                </div>
+                
 
             </BrowserRouter>
         )

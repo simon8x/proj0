@@ -121,10 +121,18 @@
 #slider{
     background-color:steelblue;
     margin: 0;
-    height: 200px;
     color:whitesmoke;
     padding-top:40px;
 }
+
+.slider-big{
+    height: 200px;
+}
+
+.slider-small{
+    height: 100px;
+}
+
 
 .btn-white{
     background-color: green;
