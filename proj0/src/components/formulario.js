@@ -11,23 +11,66 @@ class Formulario extends Component{
 	generoMujerRef = React.createRef();
 	generoOtroRef = React.createRef();
 
+	state = {
+		user:{}
+	};
+
 	recibirFormulario = (e) => {
 		e.preventDefault(); /*bloquea acción por defecto en este caso el envío del formulario y recarga de la página*/
+
+		var genero = 'hombre';
+
+		if(this.generoHombreRef.current.checked){
+			genero = this.generoHombreRef.current.value;
+		}else if(this.generoMujerRef.current.checked){
+			genero = this.generoMujerRef.current.value;
+		}else { 
+			genero = this.generoOtroRef.current.value;
+		}
+		
+		var user = {
+			nombre:this.nombreRef.current.value,
+			apellidos:this.apellidosRef.current.value,
+			bio:this.bioRef.current.value,
+			genero:genero
+		}
+
+		this.setState({
+			user:user
+		});
+
 		console.log( "Formulario Enviado !");
-		console.log( this.nombreRef.current.value );
-		console.log( this.apellidosRef.current.value );
-		console.log( this.bioRef.current.value );
+		console.log( user );
 
 	}
 
 
 	render() {
 
+		if(this.state.user.nombre){
+			var user = this.state.user;
+		}
+
+
 		return (
 			<div>
 				<div className="contenido">
 
 					<h2> FORMULARIO</h2>
+
+					{/* mostrar datos recibidos desde el form */}
+
+					{this.state.user.nombre &&
+						<div id="userdata">
+							<p>Nombre : <strong> { user.nombre } </strong></p>
+							<p>Apellidos : <strong> { user.apellidos } </strong></p>
+							<p>Bio : <strong> { user.bio } </strong></p>
+							<p>Género = <strong> { user.genero } </strong></p>
+						</div>
+
+
+					}
+
 
 					<form className="mid-form" onSubmit={this.recibirFormulario}>
 						<div className="form-group">
